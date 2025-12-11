@@ -1,0 +1,12 @@
+{
+  "name": "google-pagespeed-insights",
+  "version": "1.0.0",
+  "description": "Python package for Google PageSpeed Insights API",
+  "main": "src/__init__.py",
+  "scripts": {
+    "test": "pytest"
+  },
+  "keywords": ["google", "pagespeed", "insights", "performance"],
+  "author": "",
+  "license": "MIT"
+}
