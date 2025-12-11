@@ -55,14 +55,47 @@ class PageSpeedClient:
             params[f"category"] = category
 
         try:
-            response = requests.get(self.BASE_URL, params=params, timeout=60)
+            response = requests.get(self.BASE_URL, params=params, timeout=90)
             response.raise_for_status()
-            return self._parse_response(response.json())
+            result = self._parse_response(response.json())
+            result["strategy"] = strategy
+            return result
+        except requests.exceptions.Timeout:
+            return {
+                "success": False,
+                "error": f"Request timeout after 90 seconds for {strategy} analysis",
+                "strategy": strategy
+            }
         except requests.exceptions.RequestException as e:
             return {
                 "success": False,
-                "error": str(e)
+                "error": str(e),
+                "strategy": strategy
             }
+
+    def analyze_mobile(self, url: str) -> Dict:
+        """
+        Analyze URL for mobile devices
+
+        Args:
+            url: URL to analyze
+
+        Returns:
+            Dict containing mobile PageSpeed results
+        """
+        return self.analyze_url(url, strategy="mobile")
+
+    def analyze_desktop(self, url: str) -> Dict:
+        """
+        Analyze URL for desktop devices
+
+        Args:
+            url: URL to analyze
+
+        Returns:
+            Dict containing desktop PageSpeed results
+        """
+        return self.analyze_url(url, strategy="desktop")
 
     def _parse_response(self, data: Dict) -> Dict:
         """

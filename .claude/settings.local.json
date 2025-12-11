@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(test:*)",
+      "Bash(..venvScriptspython.exe -c \"from supabase_api import SupabaseAPI; print(''Supabase package import: OK'')\")",
+      "Bash(./venv/Scripts/python.exe -c \"from supabase_api import SupabaseAPI; print(''Supabase package import: OK'')\")",
+      "Bash(../venv/Scripts/pip.exe install:*)",
+      "Bash(./venv/Scripts/pip.exe install:*)",
+      "Bash(./venv/Scripts/python.exe:*)",
+      "Bash(../venv/Scripts/python.exe test_supabase_data.py)",
+      "Bash(../venv/Scripts/python.exe test_direct_supabase.py)",
+      "Bash(../venv/Scripts/python.exe test_insert.py)",
+      "Bash(../venv/Scripts/python.exe check_table_schema.py)",
+      "Bash(../venv/Scripts/python.exe test_rls.py)",
+      "Bash(../venv/Scripts/python.exe check_gmb_table.py)",
+      "Bash(../venv/Scripts/python.exe:*)"
+    ]
+  }
+}
