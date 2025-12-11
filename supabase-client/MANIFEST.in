@@ -1,0 +1,17 @@
+# Include documentation and configuration files
+include README.md
+include LICENSE
+include .env.example
+include requirements_supabase.txt
+
+# Include all markdown files
+recursive-include supabase_client *.md
+
+# Exclude compiled Python files
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.pyo
+
+# Exclude tests and examples from distribution
+prune tests
+prune examples
