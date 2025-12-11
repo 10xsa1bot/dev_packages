@@ -1,0 +1,9 @@
+README.md
+setup.py
+google_pagespeed_insights.egg-info/PKG-INFO
+google_pagespeed_insights.egg-info/SOURCES.txt
+google_pagespeed_insights.egg-info/dependency_links.txt
+google_pagespeed_insights.egg-info/requires.txt
+google_pagespeed_insights.egg-info/top_level.txt
+src/__init__.py
+src/pagespeed.py

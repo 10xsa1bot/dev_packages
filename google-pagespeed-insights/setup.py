@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name="google-pagespeed-insights",
@@ -6,7 +6,8 @@ setup(
     description="Python package for Google PageSpeed Insights API",
     author="",
     author_email="",
-    packages=find_packages(),
+    packages=["google_pagespeed_insights"],
+    package_dir={"google_pagespeed_insights": "src"},
     install_requires=[
         "requests>=2.31.0",
     ],
