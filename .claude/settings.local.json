@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(ls:*)",
+      "Bash(git checkout:*)",
+      "Bash(curl -I https://checkssl.tourismusexperten.de/check_ssl)",
+      "Bash(curl -I \"https://checkssl.tourismusexperten.de/check_ssl?url=https://staudacherhof.de\" -u \"sa1bot:522FQNa@t''''s=\")",
+      "Bash(git add:*)",
+      "Bash(cat:*)",
+      "Bash(curl -I \"https://checkssl.tourismusexperten.de/check_ssl?url=https://staudacherhof.de\" -u \"sa1bot:522FQNa@t''s=\")",
+      "Bash(curl -s \"https://checkssl.tourismusexperten.de/check_ssl?url=https://staudacherhof.de\" -u \"sa1bot:522FQNa@t''''s=\")",
+      "Bash(python -m py_compile:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
